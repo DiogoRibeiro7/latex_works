@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2023.11.13)  9 JUL 2024 17:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.1) (preloaded format=pdflatex 2023.11.13)  9 JUL 2024 17:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -182,7 +182,12 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 12.
  [1
 
-{/Users/diogoribeiro/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map}] (solving_healthcare_challenge.aux)
+{/Users/diogoribeiro/Library/Application Support/MiKTeX/texmfs/data/fonts/map/pdftex/pdftex.map}] [2] [3]
+Overfull \hbox (8.09024pt too wide) in paragraph at lines 157--158
+[]\OT1/cmr/bx/n/10 Readmission Rates \OT1/cmr/m/n/10 linked to \OT1/cmr/bx/n/10 Dis-charge Plan-ning \OT1/cmr/m/n/10 and \OT1/cmr/bx/n/10 Post-Discharge
+ []
+
+[4] [5] [6] (solving_healthcare_challenge.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-10>
@@ -191,17 +196,17 @@ Package rerunfilecheck Info: File `solving_healthcare_challenge.out' has not cha
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 7857 strings out of 474824
- 127137 string characters out of 5739209
- 1926040 words of memory out of 5000000
+ 7878 strings out of 474824
+ 127337 string characters out of 5739209
+ 1931040 words of memory out of 5000000
  29751 multiletter control sequences out of 15000+600000
  562659 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,5n,79p,346b,431s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,5n,79p,500b,634s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/diogoribeiro/Library/Application Support/MiKTeX/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk></Users/diogoribeiro/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></Users/diogoribeiro/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></Users/diogoribeiro/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></Users/diogoribeiro/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on solving_healthcare_challenge.pdf (1 page, 61823 bytes).
+Output written on solving_healthcare_challenge.pdf (6 pages, 90240 bytes).
 PDF statistics:
- 41 PDF objects out of 1000 (max. 8388607)
- 5 named destinations out of 1000 (max. 500000)
+ 82 PDF objects out of 1000 (max. 8388607)
+ 26 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
