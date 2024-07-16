@@ -1,0 +1,135 @@
+\documentclass{article}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{longtable}
+\usepackage{booktabs}
+\title{Analytical Solutions Report for Acme Healthcare}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Step 1: Summary of Analytical Problem Requiring Risk Adjustment}
+
+\subsection*{Selected Topic: Provider Profiling for Fraud Analysis}
+
+\paragraph{Why did you choose the topic?}
+Fraudulent activities in healthcare, particularly in documentation and billing, lead to significant financial losses and can compromise patient care. Addressing this problem ensures the integrity of the healthcare system and optimizes resource allocation.
+
+\paragraph{How can the problem benefit from an analytical solution?}
+By identifying fraudulent activities, Acme Healthcare can save costs, improve patient care, and maintain regulatory compliance. Analytical solutions enable systematic detection and prevention of fraudulent patterns through data analysis.
+
+\paragraph{Why is risk adjustment helpful or necessary?}
+Risk adjustment is crucial to ensure that variations in patient populations do not confound the detection of fraudulent activities. It levels the playing field by accounting for differences in patient severity and comorbidities, leading to more accurate identification of outliers.
+
+\paragraph{What general conceptual steps will be required to perform risk adjustment?}
+\begin{enumerate}
+    \item Define patient-level risk factors.
+    \item Collect and preprocess data.
+    \item Apply grouper systems to classify diagnoses, procedures, and medications.
+    \item Build predictive models considering risk factors.
+    \item Evaluate and validate models.
+\end{enumerate}
+
+\section*{Step 2: Using Groupers to Prepare Analytic Datasets}
+
+To prepare for your risk adjustment analysis, consider how you will group diagnoses, procedures, and drugs into more manageable categories.
+
+\subsection*{Grouper Systems}
+\begin{itemize}
+    \item \textbf{Healthcare Cost and Utilization Project (HCUP)}: Clinical Classifications Software (CCS) for ICD-9-CM.
+    \item \textbf{Unified Medical Language System (UMLS)}: Standardizes different terminologies.
+    \item \textbf{Chronic Illness and Disability Payment System (CDPS)}: Classifies chronic conditions and disabilities.
+    \item \textbf{Berenson-Eggers Type of Service (BETOS) Codes}: Categorizes services for cost analysis.
+\end{itemize}
+
+\subsection*{How can you aggregate many codes into a smaller number of analytical categories?}
+By using these grouper systems, you can map numerous individual codes into broader, clinically meaningful categories, simplifying the analysis and improving the interpretability of the data.
+
+\section*{Step 3: Describe Analytical Plan Using SEMMA Methodology}
+
+\subsection*{Sample}
+Include all rows from the datasets to ensure comprehensive analysis.
+
+\subsection*{Explore}
+Perform descriptive statistics to understand distributions and identify anomalies. Use visualizations to detect patterns and outliers. This helps in selecting relevant fields for the final analysis.
+
+\subsection*{Modify}
+Clean data by handling missing values and outliers. Transform data into appropriate formats for analysis, such as normalizing values or creating derived fields.
+
+\subsection*{Model}
+Use logistic regression and decision trees to build predictive models for identifying fraud. Incorporate patient-level risk factors to adjust predictions. Utilize structured data for accurate modeling.
+
+\subsection*{Assess}
+Evaluate models using metrics like accuracy, precision, recall, and AUC-ROC. Validate models with cross-validation and external datasets to ensure robustness.
+
+\section*{Step 4: Creating an Analytical File}
+
+Based on the lessons about how to perform risk-adjustment, the objective for this part of the project is to describe what types of data transformations and processing are required to prepare the data for the risk adjustment analysis.
+
+\subsection*{Concepts, Fields, Groupers}
+\begin{itemize}
+    \item \textbf{Concepts}: Fraud detection, patient risk factors, service utilization.
+    \item \textbf{Fields}: Patient ID, encounter ID, diagnosis codes, procedure codes, medication codes.
+    \item \textbf{Groupers}: Use HCUP CCS, UMLS, CDPS, and BETOS.
+\end{itemize}
+
+\subsection*{ETL Processes}
+\begin{itemize}
+    \item \textbf{Multiple Rows per Patient}: Patient encounters and procedures.
+    \item \textbf{Duplicates}: Check and remove duplicates during data integration.
+    \item \textbf{Standard Code Mapping}: Map local codes to standard ICD and CPT codes.
+    \item \textbf{Temporal and Regional Variation}: Adjust for temporal trends and regional differences.
+    \item \textbf{Conditional Programming}: Recode values based on conditional logic.
+    \item \textbf{Data Aggregation}: Summarize data at patient and provider levels.
+    \item \textbf{Row Selection}: Filter rows based on relevance to fraud detection.
+    \item \textbf{Field Transposition}: Pivot data for temporal analysis.
+    \item \textbf{Temporal Aspects}: Manage date formats and adjust for time-based patterns.
+\end{itemize}
+
+\section*{Step 5: Appendix: Data Dictionary and Output Interpretation}
+
+One of the most important parts of analytical projects is to have documentation about the source data so that the data science teams can produce reliable information. In addition, once the analytics are complete, the data scientist teams should explain how they transformed data and created their models.
+
+\subsection*{Sample Data Dictionary}
+\begin{longtable}{|l|p{3.5in}|l|l|}
+\hline
+\textbf{Field Name} & \textbf{Description} & \textbf{Type} & \textbf{Source} \\
+\hline
+PAT\_ID & Unique patient identifier & String & Patient Demographics \\
+\hline
+PAT\_ENC\_ID & Unique encounter identifier & String & Encounter Data \\
+\hline
+ICD\_DX & ICD diagnosis codes & String & Clinical Records \\
+\hline
+CPT\_PROC & CPT procedure codes & String & Clinical Records \\
+\hline
+FRAUD\_FLAG & Indicator of potential fraud & Boolean & Derived from Analysis \\
+\hline
+AGE & Age of patient & Integer & Patient Demographics \\
+\hline
+REGION & Geographic region of service & String & Patient Demographics \\
+\hline
+VISIT\_DATE & Date of encounter & Date & Encounter Data \\
+\hline
+RISK\_SCORE & Patient risk score & Float & Derived from Analysis \\
+\hline
+\end{longtable}
+
+\subsection*{Likely Analytical Output}
+\begin{itemize}
+    \item Risk-adjusted fraud risk scores for providers.
+    \item Identification of high-risk providers for further investigation.
+    \item Summary reports highlighting patterns and trends in fraudulent activities.
+\end{itemize}
+
+\section*{Tools and Data}
+The tools and data you will use for this assignment are:
+\begin{itemize}
+    \item \textbf{Excel}
+    \item \textbf{Access to the already transformed CMS 2008-2010 Data Entrepreneurs’ Synthetic Public Use File (from lessons in Module 4)}
+    \item \textbf{Optional: Statistical software or various programming languages to transform and analyze the data}
+\end{itemize}
+
+\end{document}
